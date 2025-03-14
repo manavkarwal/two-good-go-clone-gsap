@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Futura";
+  src: url("./assets/Futura-Bold.ttf") format("truetype");
+}
+
+
+*::selection{
+  color:white;
+  background-color: black;
+}
