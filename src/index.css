@@ -11,10 +11,3 @@
   background-color: black;
 }
 
-html, body {
-  overflow-x: hidden; /* Side Scroll हटाने के लिए */
-}
-
-[data-scroll-container] {
-  overflow: hidden;
-}

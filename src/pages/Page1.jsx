@@ -26,8 +26,8 @@ const Page1 = () => {
 
     const mouseMoved = (dets) => {
         gsap.to(playRef.current, {
-            left: dets.screenX,
-            top: dets.screenY - 90,
+            x: dets.clientX ,
+            y: dets.clientY ,
             ease: 'power3.out',
         });
     };
@@ -50,12 +50,12 @@ const Page1 = () => {
     });
 
     return (
-        <div className="md:min-h-[100vh] sm:min-h-[80vh] w-[100%] px-5 relative pt-[10vh] md:pt-[35vh]">
+        <div  className="min-h-screen  w-[100%] px-5 relative pt-[35vh]">
             <div ref={textRef}>
-                <h1 className="md:text-[13vw] text-[6vh]  md:leading-40 blend-difference font-[Futura]">
+                <h1 className="text-[13vw]   leading-40 blend-difference font-[Futura]">
                     CHANGE
                 </h1>
-                <h1 className="md:text-[14.9vw] text-[6vh] leading-3 md:leading-40 blend-difference font-[Futura]">
+                <h1 className="text-[14.9vw]  leading-40 blend-difference font-[Futura]">
                     THE COURSE
                 </h1>
             </div>
@@ -63,17 +63,17 @@ const Page1 = () => {
             <div
                 onMouseEnter={mouseEnter}
                 onMouseLeave={MouseLeave}
-                onMouseMove={mouseMoved}
+                
                 ref={videoRef}
-                className="video-container h-[50vh] sm:h-full  md:h-screen md:my-8 w-full sm:w-[100%] relative"
+                className="video-container  h-screen mt-8 w-full relative"
             >
                 <div
                     ref={playRef}
-                    className="fixed px-5 z-10 opacity-0 scale-0 py-2 md:py-6 font-[Futura] bg-black text-white rounded-full"
+                    className="fixed px-5 z-10 opacity-0 scale-0  py-6 font-[Futura] bg-black text-white rounded-full"
                 >
                     Play
                 </div>
-                <video
+                <video onMouseMove={mouseMoved}
                     className="h-[100%] w-[100%] absolute cover"
                     src={videoFile}
                     autoPlay
