@@ -5,6 +5,11 @@
   src: url("./assets/Futura-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "text1";
+  src: url("./assets/HelveticaNowText-Regular.woff2") format("truetype");
+}
+
 
 *::selection{
   color:white;

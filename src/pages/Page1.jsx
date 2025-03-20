@@ -50,12 +50,13 @@ const Page1 = () => {
     });
 
     return (
-        <div  className="min-h-screen  w-[100%] px-5 relative pt-[35vh]">
+        <div  className="   w-[100%] px-5 relative pt-[20vh] md:pt-[35vh]">
+          
             <div ref={textRef}>
-                <h1 className="text-[13vw]   leading-40 blend-difference font-[Futura]">
+                <h1 className="md:text-[14.9vw] text-[14vw] leading-20 md:leading-40 blend-difference font-[Futura]">
                     CHANGE
                 </h1>
-                <h1 className="text-[14.9vw]  leading-40 blend-difference font-[Futura]">
+                <h1 className="md:text-[14.9vw] text-[14vw] leading-20  md:leading-40  blend-difference font-[Futura]">
                     THE COURSE
                 </h1>
             </div>
@@ -65,7 +66,7 @@ const Page1 = () => {
                 onMouseLeave={MouseLeave}
                 
                 ref={videoRef}
-                className="video-container  h-screen mt-8 w-full relative"
+                className="video-container  md:h-screen h-[300px] md:mt-8 w-full relative"
             >
                 <div
                     ref={playRef}
