@@ -1,7 +1,9 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect } from 'react'
 import Page1 from './pages/Page1'
 import Page2 from './pages/Page2'
-// import LocomotiveScroll from "locomotive-scroll";
+import LocomotiveScroll from 'locomotive-scroll';
+
+const locomotiveScroll = new LocomotiveScroll();
 import Page3 from './pages/Page3';
 import Navbar from './components/navbar';
 
